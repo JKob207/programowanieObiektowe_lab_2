@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Person
+    public class Person
     {
         protected string name { get; set; }
         protected int age { get; set; }
