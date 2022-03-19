@@ -16,8 +16,8 @@ namespace Lab2
 
     class Task
     {
-        private string name;
-        private TaskStatus status;
+        private string name { get; set; }
+        public TaskStatus status { get; set; }
 
         public Task(string n, TaskStatus s)
         {

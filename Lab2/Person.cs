@@ -19,7 +19,10 @@ namespace Lab2
 
         public bool Equals(Person p)
         {
-            return this.name.Equals(p.name) && this.age.Equals(p.name);
+            if (p == null) return false;
+            if (p == this) return true;
+
+            return Object.Equals(this.name, p.name) && Object.Equals(this.age, p.age);
         }
 
         public override string ToString()
