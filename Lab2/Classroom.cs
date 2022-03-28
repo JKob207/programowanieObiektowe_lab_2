@@ -8,21 +8,27 @@ namespace Lab2
 {
     class Classroom
     {
-        private string name { get; set; }
-        private Person[] persons { get; set; }
+        private string name;
+        private Person[] persons;
 
-        private Student _student;
-        private Teacher _teacher;
-
-        Classroom(string n, Person[] p)
+        public string Name
         {
-            name = n;
-            persons = p;
+            get { return name; }
         }
 
-        public override string ToString()
+        public Classroom(string name, Person[] persons)
         {
-            return $"Classroom: {name}";
+            this.name = name;
+            this.persons = persons;
+        }
+        override public string ToString()
+        {
+            string result = "Classroom: " + this.name + "\n\n";
+            foreach (var p in persons)
+            {
+                result += p.ToString() + "\n";
+            }
+            return result;
         }
     }
 }

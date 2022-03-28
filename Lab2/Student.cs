@@ -9,7 +9,7 @@ namespace Lab2
     class Student: Person
     {
         protected string group { get; set; }
-        protected List<Task> tasks;
+        protected List<Task> tasks = new List<Task>();
         private Task _task1;
 
         public Student(string n, int a, string g) : base(n,a)
@@ -54,7 +54,13 @@ namespace Lab2
 
         public override string ToString()
         {
-            return $"Student: {name} ({age} y.o.)";
+            string result = $"Student: {name} ({age} y.o.)\n";
+            result += $"Group: {group}\n";
+            foreach (var t in tasks)
+            {
+                result += t.ToString() + "\n";
+            }
+            return result;
         }
 
         public bool Equals(Student s)

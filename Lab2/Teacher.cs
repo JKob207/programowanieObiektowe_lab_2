@@ -15,7 +15,7 @@ namespace Lab2
         }
         public override string ToString()
         {
-            return $"Teacher: {name} ({age} y.o.)";
+            return $"Teacher: {name} ({age} y.o.)\n";
         }
     }
 }
